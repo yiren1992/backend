@@ -17,15 +17,15 @@ api = Api(app)
 
 
 def router():
-    from back_end.api.testcase import TestCaseAdd
+    from api.testcase import TestCaseAdd
     api.add_resource(TestCaseAdd, '/testcase/add')
-    from back_end.api.testcase import TestCaseDelete
+    from api.testcase import TestCaseDelete
     api.add_resource(TestCaseDelete, '/testcase/delete')
-    from back_end.api.testcase import TestCaseUpdate
+    from api.testcase import TestCaseUpdate
     api.add_resource(TestCaseUpdate, '/testcase/update')
-    from back_end.api.testcase import TestCaseGet
+    from api.testcase import TestCaseGet
     api.add_resource(TestCaseGet, '/testcase/get')
-    from back_end.api.login import Login
+    from api.login import Login
     api.add_resource(Login, '/login')
 
 

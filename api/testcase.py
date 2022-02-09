@@ -6,12 +6,14 @@
 from flask import request
 from flask_restful import Resource
 
-from back_end.api.verify_token import auth
-from back_end.backend_server import db
-from back_end.data_base.testcase_table import TestCase
+from api.verify_token import auth
 
 
 # 定义一个测试用例接口
+from backend_server import db
+from data_base.testcase_table import TestCase
+
+
 class TestCaseAdd(Resource):
     method_decorators = [auth.login_required]
 

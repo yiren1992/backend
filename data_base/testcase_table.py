@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from back_end.backend_server import db
+from backend_server import db
 
 
 # 使用db可以让User类映射到数据库中的User表
