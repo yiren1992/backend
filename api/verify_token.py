@@ -4,7 +4,7 @@ from flask import g
 from flask_httpauth import HTTPBasicAuth
 
 # 初始化auth
-from data_base.user_table import User
+from back_end.data_base.user_table import User
 
 auth = HTTPBasicAuth()
 

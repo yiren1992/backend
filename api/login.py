@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from flask import g
 from flask_restful import Resource
-from api.verify_token import auth
+from back_end.api.verify_token import auth
 
 
 class Login(Resource):

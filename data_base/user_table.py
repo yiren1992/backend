@@ -8,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from itsdangerous import TimedJSONWebSignatureSerializer, BadSignature, SignatureExpired
 
 # 配置token种子
-from backend_server import app, db
+from back_end.backend_server import app, db
 
 
 class User(db.Model):
