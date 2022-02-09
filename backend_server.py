@@ -3,6 +3,7 @@
 
 
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 
@@ -14,6 +15,8 @@ db = SQLAlchemy(app)
 # 将flask实例加载到flask-restful中
 app.config["SECRETY_KEY"] = "SDET17"
 api = Api(app)
+# 使用 CORS 解决前后端 同源问题
+CORS(app)
 
 
 def router():
