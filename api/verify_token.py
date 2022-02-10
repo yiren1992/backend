@@ -14,6 +14,7 @@ auth的username在登录时，是用户名，在登录后，是token
 
 
 # 编写回调函数，当进行登录时，会回调此函数
+# 校验token是否合法，或者校验用户名密码是否合法
 @auth.verify_password
 def verify_password(username, password):
     print(username, password)

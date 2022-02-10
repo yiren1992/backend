@@ -7,7 +7,7 @@ from back_end.api.verify_token import auth
 
 class Login(Resource):
     # auth.login_required：是httpAuth的用法，添加了此装饰器的对象会回调校验方法
-    # auth.login_required：代表给login接口添加一个装饰器，下面get表示，对get接口进行添加
+    # method_decorators：代表给login接口添加一个装饰器，下面get表示，对get接口进行添加
     method_decorators = {'get': [auth.login_required]}
 
     def get(self):
