@@ -32,6 +32,8 @@ def router():
     api.add_resource(Login, '/login')
     from back_end.api.signup import SignUp
     api.add_resource(SignUp, '/signup')
+    from back_end.api.testcase import TestCaseRun
+    api.add_resource(TestCaseRun, '/testcase/run')
 
 
 if __name__ == '__main__':

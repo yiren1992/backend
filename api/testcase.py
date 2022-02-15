@@ -5,9 +5,9 @@
 
 from flask import request
 from flask_restful import Resource
+import jenkins
 
 from back_end.api.verify_token import auth
-
 
 # 定义一个测试用例接口
 from back_end.backend_server import db
@@ -89,3 +89,14 @@ class TestCaseGet(Resource):
         # 对测试用例进行格式化
         format_test_cases = [i.as_dict() for i in test_cases]
         return {'msg': 'OK', 'data': format_test_cases}
+
+
+class TestCaseRun(Resource):
+    method_decorators = [auth.login_required]
+
+    def get(self):
+        server = jenkins.Jenkins('http://localhost:8080', username='admin',
+                                 password='11c5a90ad2c15dde4f2526bc23205e697e')
+        server.build_job('iIniterface')
+        return {'msg': 'OK', 'errcode': 200}
+
